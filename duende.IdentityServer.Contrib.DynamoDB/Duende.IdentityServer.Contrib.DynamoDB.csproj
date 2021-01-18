@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>DynamoDb Store for operational data of Duende Identity Server</Description>
+    <Authors>Ali Bazzi</Authors>
+    <Company>Ali Bazzi</Company>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <PackageReleaseNotes>Release</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <PackageProjectUrl>https://github.com/AliBazzi/Duende.IdentityServer.Contrib.DynamoDB</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>DynamoDB Store Duende IdentityServer</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Ali Bazzi</Copyright>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net5.0\Duende.IdentityServer.Contrib.DynamoDB.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\net5.0\Duende.IdentityServer.Contrib.DynamoDB.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.*" />
+    <PackageReference Include="Duende.IdentityServer.Storage" Version="5.0.0" />
+    <PackageReference Include="Duende.IdentityServer" Version="5.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove="Duende.IdentityServer.Contrib.DynamoDB.nuspec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.jpg" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
