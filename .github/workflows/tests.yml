@@ -14,7 +14,7 @@ jobs:
       - name: Start DynamoDB in GitHub Actions
         uses: rrainn/dynamodb-action@v2.0.0
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1.5.0
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
       - name: Install dependencies
